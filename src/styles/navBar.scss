@@ -1,0 +1,61 @@
+/* NavBar.scss */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-radius: 8px;
+
+  .nav-links {
+
+    min-width: 300px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: #333;
+        background-color: gainsboro;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-transform: capitalize;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #6200ee;
+          background-color: #f5f5f5;
+        }
+
+        /* Стиль для активной ссылки */
+        &[aria-current="page"] {
+          color: #ffffff;
+          background-color: #6200ee;
+        }
+      }
+    }
+  }
+
+  /* Адаптив для мобильных */
+  @media (max-width: 768px) {
+     .nav-links {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 10px;
+      
+      li {
+        a {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
